@@ -6,7 +6,7 @@
     padding="40px"
   />
   <h1>Grafana Plugin tools</h1>
-  <p>Create and Sign Grafana plugins with ease.</p>
+  <p>Create and Sign Grafana plugins with ease!</p>
 </div>
 <div align="center">
   <a href="https://github.com/grafana/plugin-tools/actions/workflows/ci.yml"
