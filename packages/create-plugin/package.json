@@ -39,11 +39,12 @@
     "marked": "^4.0.12",
     "marked-terminal": "^5.1.1",
     "mkdirp": "^1.0.4",
-    "plop": "^2.7.4",
+    "plop": "^3.1.0",
     "semver": "^7.3.5"
   },
   "devDependencies": {
     "@types/glob": "^7.0.0",
+    "@types/inquirer": "9.0.2",
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0"
   },

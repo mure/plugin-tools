@@ -184,8 +184,6 @@ function replacePatternWithTemplateInReadme(
     type: 'modify',
     path: path.join(exportPath, 'README.md'),
     pattern,
-    // @ts-ignore
-    template: undefined,
     templateFile: path.join(PARTIALS_DIR, partialsFile),
     data: EXTRA_TEMPLATE_VARIABLES,
   };
