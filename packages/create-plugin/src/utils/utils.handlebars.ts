@@ -1,8 +1,8 @@
 import Handlebars, { HelperOptions } from 'handlebars';
 import * as changeCase from 'change-case';
-import titleCase from 'title-case';
-import upperCase from 'upper-case';
-import lowerCase from 'lower-case';
+import { titleCase } from 'title-case';
+import { upperCase } from 'upper-case';
+import { lowerCase } from 'lower-case';
 import { PLUGIN_TYPES } from '../constants';
 
 // Why? The `{#if}` expression in Handlebars unfortunately only accepts a boolean, which makes it hard to compare values in templates.
@@ -16,7 +16,7 @@ export const normalizeId = (pluginName: string, orgName: string, type: PLUGIN_TY
 
   const newPluginName = pluginName.replace(re, '').replace(nameRegex, '');
   const newOrgName = orgName.replace(nameRegex, '');
-  return changeCase.lowerCase(newOrgName) + '-' + changeCase.lowerCase(newPluginName) + `-${type}`;
+  return lowerCase(newOrgName) + '-' + lowerCase(newPluginName) + `-${type}`;
 };
 
 // Needed when we are rendering the templates outside of the context of Plop but still would like to support the same helpers
