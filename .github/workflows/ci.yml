@@ -64,7 +64,7 @@ jobs:
         with:
           path: |
             packages/create-plugin/generated/yarn.lock
-          key: ${{ steps.cache-primes-restore.outputs.cache-generated-lock-restore }}
+          key: ${{ steps.cache-generated-lock-restore.outputs.cache-primary-key }}
 
   release:
     runs-on: ubuntu-latest
