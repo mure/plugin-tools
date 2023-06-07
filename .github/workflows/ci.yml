@@ -31,6 +31,14 @@ jobs:
       - name: Build all packages
         run: yarn build
 
+      - name: Restore cached generated plugin yarn.lock
+        id: cache-generated-lock-restore
+        uses: actions/cache/restore@v3
+        with:
+          path: |
+            packages/create-plugin/generated/yarn.lock
+          key: ${{ runner.os }}-generated-yarn-lock
+
       - name: '@grafana/create-plugin - test an app plugin generation'
         run: yarn nx run @grafana/create-plugin:generate-app && (cd ./packages/create-plugin/generated && yarn install --prefer-offline && yarn build && yarn lint)
       - name: '@grafana/create-plugin - test an app with backend plugin generation'
@@ -49,6 +57,14 @@ jobs:
           GRAFANA_API_KEY: ${{ secrets.GRAFANA_API_KEY }}
         run: node ../../sign-plugin/dist/bin/run.js --rootUrls http://www.example.com --signatureType private
         working-directory: ./packages/create-plugin/generated
+
+      - name: Save generated plugin yarn.lock
+        id: cache-generated-lock-save
+        uses: actions/cache/save@v3
+        with:
+          path: |
+            packages/create-plugin/generated/yarn.lock
+          key: ${{ steps.cache-primes-restore.outputs.cache-generated-lock-restore }}
 
   release:
     runs-on: ubuntu-latest
