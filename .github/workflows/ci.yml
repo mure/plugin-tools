@@ -36,7 +36,8 @@ jobs:
         uses: actions/cache/restore@v3
         with:
           path: |
-            packages/create-plugin/generated/yarn.lock
+            ./packages/create-plugin/generated/yarn.lock
+            ./packages/create-plugin/generated/node_modules
           key: ${{ runner.os }}-generated-yarn-lock
 
       - name: '@grafana/create-plugin - test an app plugin generation'
@@ -63,7 +64,8 @@ jobs:
         uses: actions/cache/save@v3
         with:
           path: |
-            packages/create-plugin/generated/yarn.lock
+            ./packages/create-plugin/generated/yarn.lock
+            ./packages/create-plugin/generated/node_modules
           key: ${{ steps.cache-generated-lock-restore.outputs.cache-primary-key }}
 
   release:
