@@ -1,22 +1,13 @@
 ---
 id: grafana-plugin-sdk-for-go
 title: Grafana plugin SDK for Go
-sidebar_position: 2
+pagination_next: null
+pagination_prev: null
 ---
 
-# Grafana plugin SDK for Go
+<head>
+  <link rel="canonical" href="https://grafana.com/developers/plugin-tools/introduction/grafana-plugin-sdk-for-go" />
+  <meta http-equiv="refresh" content="0; url=https://grafana.com/developers/plugin-tools/introduction/grafana-plugin-sdk-for-go" />
+</head>
 
-The [Grafana plugin SDK for Go](https://pkg.go.dev/mod/github.com/grafana/grafana-plugin-sdk-go?tab=overview) is a [Go](https://golang.org/) module that provides a set of [packages](https://pkg.go.dev/mod/github.com/grafana/grafana-plugin-sdk-go?tab=packages) that you can use to implement a backend plugin.
-
-The plugin SDK provides a high-level framework with APIs, utilities, and tooling. By using the SDK, you can avoid the need to learn the details of the [plugin protocol](./plugin-protocol.md) and RPC communication protocol, so you don't have to manage either one.
-
-## Versioning
-
-The Grafana plugin Go SDK is still in development. It is based on the [plugin protocol]), which is versioned separately and is considered stable. However, from time to time, we might introduce breaking changes in the SDK.
-
-When we update the plugin SDK, those plugins that use an older version of the SDK should still work with Grafana. However, these older plugins may be unable to use the new features and capabilities we introduce in updated SDK versions.
-
-## See also
-
-- [SDK source code](https://github.com/grafana/grafana-plugin-sdk-go)
-- [Go reference documentation](https://pkg.go.dev/github.com/grafana/grafana-plugin-sdk-go)
+This page has moved to [https://grafana.com/developers/plugin-tools/introduction/grafana-plugin-sdk-for-go](https://grafana.com/developers/plugin-tools/introduction/grafana-plugin-sdk-for-go)
