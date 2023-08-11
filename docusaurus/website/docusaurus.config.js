@@ -25,7 +25,7 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: presetsDocs,
+        docs: { ...presetsDocs, editUrl: undefined },
         theme: presetsTheme,
       }),
     ],
@@ -34,8 +34,8 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      navbar: themeConfigNavbar,
-      footer: themeConfigFooter,
+      navbar: { ...themeConfigNavbar, items: [] },
+      // footer: themeConfigFooter,
       prism: themeConfigPrism,
       colorMode: themeConfigColorMode,
     }),
